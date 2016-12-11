@@ -142,8 +142,7 @@ class HashTable {
   }
 
   set(key, value) {
-    let hashVal = hash(key);
-    this.buckets[hashVal].set(key, value);
+    this.buckets[hash(key)].set(key, value);
     return this; // for chaining, do not edit
   }
 
